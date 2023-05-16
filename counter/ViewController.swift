@@ -23,11 +23,35 @@ class ViewController: UIViewController {
         count = count + 1
         counterLabel.text = "\(count)"
         
+        let date = Date()
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .short
+        dateFormatter.locale = Locale(identifier: "ru_RU")
+        
+        let dateString = dateFormatter.string(from: date)
+        
+        textField.text += "\(dateString): значение изменено на +1 "
+        
     }
    
     @IBAction func minusButton(_ sender: Any) {
         count = count - 1
         counterLabel.text = "\(count)"
+        
+        let date = Date()
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .short
+        dateFormatter.locale = Locale(identifier: "ru_RU")
+        
+        let dateString = dateFormatter.string(from: date)
+        
+        textField.text += "\(dateString): значение изменено на -1 "
+        
+        
         
     }
     
@@ -35,10 +59,23 @@ class ViewController: UIViewController {
         count = 0
         counterLabel.text = "\(count)"
       
+        let date = Date()
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .short
+        dateFormatter.locale = Locale(identifier: "ru_RU")
+        
+        let dateString = dateFormatter.string(from: date)
+        
+        textField.text += "\(dateString): значение сброшено      "
+        
     }
     
     
     @IBOutlet weak var textField: UITextView!
+    
+    
     
 }
 
