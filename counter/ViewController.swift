@@ -11,6 +11,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var counterLabel: UILabel!
     
+    
     private var count = 0
     
     override func viewDidLoad() {
@@ -21,19 +22,23 @@ class ViewController: UIViewController {
     @IBAction func plusButton(_ sender: Any) {
         count = count + 1
         counterLabel.text = "\(count)"
+        
     }
    
     @IBAction func minusButton(_ sender: Any) {
         count = count - 1
         counterLabel.text = "\(count)"
+        
     }
     
     @IBAction func resetButton(_ sender: Any) {
         count = 0
         counterLabel.text = "\(count)"
+      
     }
     
     
+    @IBOutlet weak var textField: UITextView!
     
 }
 
